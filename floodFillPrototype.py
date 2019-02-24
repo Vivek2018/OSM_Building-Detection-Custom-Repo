@@ -14,7 +14,7 @@ def RGB_distance_threshold(first_rgb, second_rgb):
     return math.sqrt(np.sum((np.absolute(first_rgb - second_rgb))**2))
 
 def flood_fill(image, x_loc, y_loc, target_color, replacement_color):
-    image[y_loc, x_loc] = replacement_color;
+    image[y_loc, x_loc] = replacement_color
     pixel_queue = queue.Queue()
     pixel_queue.put((x_loc, y_loc))
     width = len(image[0])
@@ -74,11 +74,6 @@ image = cv2.imread(FILENAME + '.PNG')
 cv2.namedWindow('image')
 cv2.setMouseCallback('image', register_click)
 cv2.imshow('image', image)
-# while 1:
-#     cv2.imshow('image', image)
-#     if cv2.waitKey(20) & 0xFF == 27:
-#         break
-# cv2.destroyAllWindows()
 
 print(x_global, y_global)
 
